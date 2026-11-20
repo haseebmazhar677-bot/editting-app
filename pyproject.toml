@@ -1,0 +1,14 @@
+[project]
+name = "video-transformer"
+version = "0.2.0"
+description = "Color, object/character and voice transformation for videos"
+# Pinned below Python 3.14 on purpose: Gradio and its native dependencies (e.g. PyYAML)
+# may not ship prebuilt Windows wheels for the newest Python, which forces source builds.
+# Our own code needs only the standard library; Gradio is the single third-party dependency.
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "gradio>=4.44,<7",
+]
+
+[tool.uv]
+package = false
